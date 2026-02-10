@@ -4,3 +4,4 @@ $gap: 1px;
 $padding: 10px;
 $font-size: 30px;
 $days-in-week: 7;
+$cell-full-size: $day-size + ($border * 2) + $gap;
