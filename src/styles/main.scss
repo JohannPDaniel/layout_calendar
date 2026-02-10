@@ -1,5 +1,17 @@
 @use 'variables' as *;
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .calendar {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +20,7 @@
   box-sizing: border-box;
 
   /* prettier-ignore */
-  width: calc((#{$day-size} * #{$days-in-week}) + (#{$border} * 2 * #{$days-in-week}) + (#{$gap} * (#{$days-in-week} - 1)) + (#{$padding} * 2));
+  width: calc(#{$days-in-week * $cell-full-size} + #{($days-in-week - 1) * $gap} + #{2 * $padding});
   padding: $padding;
 }
 
@@ -43,19 +55,19 @@
 }
 
 $start-days: (
-  day-sun: 0,
-  day-mon: 1,
-  day-tue: 2,
-  day-wed: 3,
-  day-thu: 4,
-  day-fri: 5,
-  day-sat: 6,
+  sun: 0,
+  mon: 1,
+  tue: 2,
+  wed: 3,
+  thu: 4,
+  fri: 5,
+  sat: 6,
 );
 
 @each $day, $offset in $start-days {
-  .calendar--start-#{$day} {
+  .calendar--start-day-#{$day} {
     .calendar__day:first-child {
-      margin-left: calc(#{$offset} * (#{$day-size} + #{$gap}));
+      margin-left: calc(#{$offset} * (#{$cell-full-size} + #{$gap}));
     }
   }
 }
