@@ -12,6 +12,7 @@ const basic = {
     'h1',
   ],
   misMatchThreshold: 0.5,
+  url: 'https://johannpdaniel.github.io/layout_calendar/',
   referenceUrl: 'https://johannpdaniel.github.io/layout_calendar/',
   testUrl: 'https://johannpdaniel.github.io/layout_calendar/',
 };
