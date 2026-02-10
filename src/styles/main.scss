@@ -6,6 +6,8 @@
   gap: $gap;
 
   box-sizing: border-box;
+
+  /* prettier-ignore */
   width: calc((#{$day-size} * #{$days-in-week}) + (#{$border} * 2 * #{$days-in-week}) + (#{$gap} * (#{$days-in-week} - 1)) + (#{$padding} * 2));
   padding: $padding;
 }
@@ -67,6 +69,7 @@ $start-days: (
     }
   }
 }
+
 @for $i from 1 through 31 {
   .calendar__day:nth-child(#{$i})::before {
     content: '#{$i}';
