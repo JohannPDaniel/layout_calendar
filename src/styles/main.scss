@@ -6,9 +6,7 @@
   gap: $gap;
 
   box-sizing: border-box;
-  width: calc(
-    (#{$day-size} * #{$days-in-week}) + (#{$border} * 2 * #{$days-in-week}) + (#{$gap} * (#{$days-in-week} - 1)) + (#{$padding} * 2)
-  );
+  width: calc((#{$day-size} * #{$days-in-week}) + (#{$border} * 2 * #{$days-in-week}) + (#{$gap} * (#{$days-in-week} - 1)) + (#{$padding} * 2));
   padding: $padding;
 }
 
