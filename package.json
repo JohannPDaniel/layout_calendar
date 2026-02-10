@@ -14,7 +14,6 @@
     "watch": "parcel src/index.html --open",
     "build:dist": "parcel build src/index.html --dist-dir dist",
     "build:docs": "parcel build src/index.html --dist-dir docs --public-url ./",
-    "build": "npm run build:dist && npm run build:docs",
     "test": "npm run lint && npm run test:only"
   },
   "keywords": [],
